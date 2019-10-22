@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{EB39B676-1E6C-492A-86C7-DB3B1AD8E805}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Master</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Audio.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Common.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Font.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Image.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Model.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Program.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Shader.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\cItem_Video.cpp" />
+    <ClCompile Include="..\Libraries\AssetItems\iItem.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_Audios.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_Fonts.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_Images.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_impl.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_Models.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_Programs.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_Shaders.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\cAssetManager_Videos.cpp" />
+    <ClCompile Include="..\Libraries\AssetManager\iAssetManager.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_ChannelControl_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_ChannelGroup_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_Channel_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_DSPConnection_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_DSP_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_Exception_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_Geometry_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_Reverb3D_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_SoundGroup_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_Sound_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_System.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_System_FMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cAudio_System_impl.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\cEngineFMOD.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\gAudio_System.cpp" />
+    <ClCompile Include="..\Libraries\AudioEngine\iAudio_System.cpp" />
+    <ClCompile Include="..\Libraries\DebugRenderer\cDebugRenderer.cpp" />
+    <ClCompile Include="..\Libraries\DebugRenderer\cDebugRenderer_BuiltInShapes.cpp" />
+    <ClCompile Include="..\Libraries\DebugRenderer\CErrorLog.cpp" />
+    <ClCompile Include="..\Libraries\DebugRenderer\cGLRenderStateHelper.cpp" />
+    <ClCompile Include="..\Libraries\DebugRenderer\COpenGLError.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\AssestRoot.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\AssetFile.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\AssetGroups.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\AssetParts.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\Assets.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\GameLibrary.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\Object.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\Objects.cpp" />
+    <ClCompile Include="..\Libraries\GameLibrary\Properties.cpp" />
+    <ClCompile Include="..\Libraries\LightManager\cLightHelper.cpp" />
+    <ClCompile Include="..\Libraries\LightManager\cLightManager.cpp" />
+    <ClCompile Include="..\Libraries\LowPassFilter\cLowPassFilter.cpp" />
+    <ClCompile Include="..\Libraries\MessageManager\cMessageManager.cpp" />
+    <ClCompile Include="..\Libraries\MessageManager\cMessageManager_impl.cpp" />
+    <ClCompile Include="..\Libraries\MessageManager\cMessage_XML.cpp" />
+    <ClCompile Include="..\Libraries\MessageManager\iMessage.cpp" />
+    <ClCompile Include="..\Libraries\MessageManager\iMessageInterface.cpp" />
+    <ClCompile Include="..\Libraries\MessageManager\iMessageManager.cpp" />
+    <ClCompile Include="..\Libraries\Models\cPlyLoader.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Audio.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Common.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Font.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Group.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Image.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Light.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Model.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Physics.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_Video.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\cObject_World.cpp" />
+    <ClCompile Include="..\Libraries\ObjectItems\iObject.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cGameObject.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Audio.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Font.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Group.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Image.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_impl.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Light.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Model.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Physics.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_Video.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\cObjectManager_World.cpp" />
+    <ClCompile Include="..\Libraries\ObjectManager\iObjectManager.cpp" />
+    <ClCompile Include="..\Libraries\Physics\cPhysics.cpp" />
+    <ClCompile Include="..\Libraries\Physics\cPhysics_Ericson.cpp" />
+    <ClCompile Include="..\Libraries\Physics\cPhysics_Henky.cpp" />
+    <ClCompile Include="..\Libraries\Physics\cPhysics_Henry.cpp" />
+    <ClCompile Include="..\Libraries\Physics\PhysicsStuff.cpp" />
+    <ClCompile Include="..\Libraries\Shaders\cProgramLoader.cpp" />
+    <ClCompile Include="..\Libraries\Shaders\cShader.cpp" />
+    <ClCompile Include="..\Libraries\Shaders\cShaderLoader.cpp" />
+    <ClCompile Include="..\Libraries\Shaders\cShaderManager.cpp" />
+    <ClCompile Include="..\Libraries\Shaders\sUniform_old.cpp" />
+    <ClCompile Include="..\Libraries\Utilities\cFormat.cpp" />
+    <ClCompile Include="..\Libraries\VAOManager\cVAOManager.cpp" />
+    <ClCompile Include="..\Libraries\VAOManager\cVAOManager_impl.cpp" />
+    <ClCompile Include="..\Libraries\VAOManager\iVAOManager.cpp" />
+    <ClCompile Include="..\Libraries\VAOManager\sModelDrawInfo.cpp" />
+    <ClCompile Include="..\Libraries\XML\XMLArrayBase.cpp" />
+    <ClCompile Include="..\Libraries\XML\XMLAttribute.cpp" />
+    <ClCompile Include="..\Libraries\XML\XMLDocument.cpp" />
+    <ClCompile Include="..\Libraries\XML\XMLIndent.cpp" />
+    <ClCompile Include="..\Libraries\XML\XMLNewArrayBase.cpp" />
+    <ClCompile Include="..\Libraries\XML\XMLNewNodeBase.cpp" />
+    <ClCompile Include="..\Libraries\XML\XMLNodeBase.cpp" />
+    <ClCompile Include="AudioTest\test_Audio.cpp" />
+    <ClCompile Include="AudioTest\test_AudioEngine.cpp" />
+    <ClCompile Include="Common\globalStuff.cpp" />
+    <ClCompile Include="Common\LoadGLFW.cpp" />
+    <ClCompile Include="Common\pFindObjectByFriendlyName.cpp" />
+    <ClCompile Include="GDP2019\GLFW_Callbacks.cpp" />
+    <ClCompile Include="GDP2019\HandleDebugBallPhysics.cpp" />
+    <ClCompile Include="GDP2019\HandleDebugLights.cpp" />
+    <ClCompile Include="GDP2019\HandleDebugPirate.cpp" />
+    <ClCompile Include="GDP2019\LightDebugSheres.cpp" />
+    <ClCompile Include="GDP2019\save stuff.cpp" />
+    <ClCompile Include="GDP2019\test_GDP2019.cpp" />
+    <ClCompile Include="Graphics\cGraphicsToObject.cpp" />
+    <ClCompile Include="Graphics\Graphics_Callback.cpp" />
+    <ClCompile Include="Graphics\test_Graphics.cpp" />
+    <ClCompile Include="Master.cpp" />
+    <ClCompile Include="OtherTest\test_filesystem.cpp" />
+    <ClCompile Include="OtherTest\test_gl.cpp" />
+    <ClCompile Include="Physics\cPhysicsTilter.cpp" />
+    <ClCompile Include="Physics\ObjectCreator.cpp" />
+    <ClCompile Include="Physics\Physics_Callback.cpp" />
+    <ClCompile Include="Physics\test_Physics.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Audio.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Common - Copy.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Common.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Font.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Image.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Model.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Program.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Shader.h" />
+    <ClInclude Include="..\Libraries\AssetItems\cItem_Video.h" />
+    <ClInclude Include="..\Libraries\AssetItems\iItem.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_Audios.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_Fonts.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_Images.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_impl.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_Models.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_Programs.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_Shaders.h" />
+    <ClInclude Include="..\Libraries\AssetManager\cAssetManager_Videos.h" />
+    <ClInclude Include="..\Libraries\AssetManager\iAssetManager.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_ChannelControl_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_ChannelGroup_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_Channel_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_DSPConnection_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_DSP_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_Exception_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_Geometry_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_Reverb3D_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_SoundGroup_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_Sound_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_System.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_System_FMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cAudio_System_impl.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\cEngineFMOD.h" />
+    <ClInclude Include="..\Libraries\AudioEngine\iAudio_System.h" />
+    <ClInclude Include="..\Libraries\DebugRenderer\cDebugRenderer.h" />
+    <ClInclude Include="..\Libraries\DebugRenderer\CErrorLog.h" />
+    <ClInclude Include="..\Libraries\DebugRenderer\cGLRenderStateHelper.h" />
+    <ClInclude Include="..\Libraries\DebugRenderer\COpenGLError.h" />
+    <ClInclude Include="..\Libraries\DebugRenderer\iDebugRenderer.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\AssestRoot.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\AssetFile.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\AssetGroups.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\AssetParts.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\Assets.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\GameLibrary.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\Object.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\Objects.h" />
+    <ClInclude Include="..\Libraries\GameLibrary\Properties.h" />
+    <ClInclude Include="..\Libraries\LightManager\cLightHelper.h" />
+    <ClInclude Include="..\Libraries\LightManager\cLightManager.h" />
+    <ClInclude Include="..\Libraries\LowPassFilter\cLowPassFilter.h" />
+    <ClInclude Include="..\Libraries\MessageManager\cMessageManager.h" />
+    <ClInclude Include="..\Libraries\MessageManager\cMessageManager_impl.h" />
+    <ClInclude Include="..\Libraries\MessageManager\cMessage_XML.h" />
+    <ClInclude Include="..\Libraries\MessageManager\iMessage.h" />
+    <ClInclude Include="..\Libraries\MessageManager\iMessageInterface.h" />
+    <ClInclude Include="..\Libraries\MessageManager\iMessageManager.h" />
+    <ClInclude Include="..\Libraries\Models\cPlyLoader.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Audio.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Common.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Font.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Group.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Image.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Light.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Model.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Physics.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_Video.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\cObject_World.h" />
+    <ClInclude Include="..\Libraries\ObjectItems\iObject.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cGameObject.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Audio.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Font.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Group.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Image.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_impl.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Light.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Model.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Physics.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_Video.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\cObjectManager_World.h" />
+    <ClInclude Include="..\Libraries\ObjectManager\iObjectManager.h" />
+    <ClInclude Include="..\Libraries\Physics\cPhysics.h" />
+    <ClInclude Include="..\Libraries\Physics\cPhysics_Henky.h" />
+    <ClInclude Include="..\Libraries\Physics\PhysicsStuff.h" />
+    <ClInclude Include="..\Libraries\Shaders\cProgramLoader.h" />
+    <ClInclude Include="..\Libraries\Shaders\cShaderLoader.h" />
+    <ClInclude Include="..\Libraries\Shaders\cShaderManager.h" />
+    <ClInclude Include="..\Libraries\Shaders\sUniform_old.h" />
+    <ClInclude Include="..\Libraries\Utilities\cFormat.h" />
+    <ClInclude Include="..\Libraries\VAOManager\cVAOManager.h" />
+    <ClInclude Include="..\Libraries\VAOManager\cVAOManager_impl.h" />
+    <ClInclude Include="..\Libraries\VAOManager\iVAOManager.h" />
+    <ClInclude Include="..\Libraries\VAOManager\sModelDrawInfo.h" />
+    <ClInclude Include="..\Libraries\XML\XMLArrayBase.h" />
+    <ClInclude Include="..\Libraries\XML\XMLAttribute.h" />
+    <ClInclude Include="..\Libraries\XML\XMLDocument.h" />
+    <ClInclude Include="..\Libraries\XML\XMLIndent.h" />
+    <ClInclude Include="..\Libraries\XML\XMLNewArrayBase.h" />
+    <ClInclude Include="..\Libraries\XML\XMLNewNodeBase.h" />
+    <ClInclude Include="..\Libraries\XML\XMLNodeBase.h" />
+    <ClInclude Include="AudioTest\test_Audio.h" />
+    <ClInclude Include="AudioTest\test_AudioEngine.h" />
+    <ClInclude Include="Common\globalStuff.h" />
+    <ClInclude Include="Common\LoadGLFW.h" />
+    <ClInclude Include="Common\pFindObjectByFriendlyName.h" />
+    <ClInclude Include="GDP2019\GLFW_Callbacks.h" />
+    <ClInclude Include="GDP2019\HandleDebugBallPhysics.h" />
+    <ClInclude Include="GDP2019\HandleDebugLights.h" />
+    <ClInclude Include="GDP2019\HandleDebugPirate.h" />
+    <ClInclude Include="GDP2019\LightDebugSheres.h" />
+    <ClInclude Include="GDP2019\test_GDP2019.h" />
+    <ClInclude Include="Graphics\cGraphicsToObject.h" />
+    <ClInclude Include="Graphics\Graphics_Callback.h" />
+    <ClInclude Include="Graphics\test_Graphics.h" />
+    <ClInclude Include="Master.h" />
+    <ClInclude Include="OtherTest\test_filesystem.h" />
+    <ClInclude Include="OtherTest\test_gl.h" />
+    <ClInclude Include="Physics\cPhysicsTilter.h" />
+    <ClInclude Include="Physics\ObjectCreator.h" />
+    <ClInclude Include="Physics\Physics_Callback.h" />
+    <ClInclude Include="Physics\test_Physics.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\assets\GraphicsLibrary(output).xml" />
+    <Xml Include="..\assets\GraphicsLibrary.xml" />
+    <Xml Include="..\assets\PhysicsLibrary(output).xml" />
+    <Xml Include="..\assets\PhysicsLibrary.xml" />
+    <Xml Include="..\assets\test_GDP2019.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\models\Graphics\barrel.ply" />
+    <None Include="..\assets\models\Graphics\Bomb.ply" />
+    <None Include="..\assets\models\Graphics\canoe.ply" />
+    <None Include="..\assets\models\Graphics\Chest.ply" />
+    <None Include="..\assets\models\Graphics\coin_map.ply" />
+    <None Include="..\assets\models\Graphics\compass.ply" />
+    <None Include="..\assets\models\Graphics\Crate.ply" />
+    <None Include="..\assets\models\Graphics\Crate2.ply" />
+    <None Include="..\assets\models\Graphics\cube_Low_Res_xyz_n.ply" />
+    <None Include="..\assets\models\Graphics\De_Zeven_Provincien_large.ply" />
+    <None Include="..\assets\models\Graphics\foo.tmp" />
+    <None Include="..\assets\models\Graphics\Kerosene_lamp_large.ply" />
+    <None Include="..\assets\models\Graphics\lantern_obj.ply" />
+    <None Include="..\assets\models\Graphics\parrot.ply" />
+    <None Include="..\assets\models\Graphics\Pirate_sword_low_poly.ply" />
+    <None Include="..\assets\models\Graphics\ship.ply" />
+    <None Include="..\assets\models\Graphics\SimpleRedShip.ply" />
+    <None Include="..\assets\models\Graphics\Sky_Pirate_Combined_xyz_n.ply" />
+    <None Include="..\assets\models\Graphics\Sphere_Radius_1_XYZ_n.ply" />
+    <None Include="..\assets\models\Graphics\Terrain_XYZ_n.ply" />
+    <None Include="..\assets\models\Graphics\torch.ply" />
+    <None Include="..\assets\models\Graphics\treasure_chest_assembled.ply" />
+    <None Include="..\assets\models\Graphics\tresure_chest_closed_lowpoly.ply" />
+    <None Include="..\assets\models\Physics\12953_ChocolateRabbit_v1.ply" />
+    <None Include="..\assets\models\Physics\BigFlatTerrain_XYZ_n.ply" />
+    <None Include="..\assets\models\Physics\Cube_1_Unit_from_origin_XYZ_n.ply" />
+    <None Include="..\assets\models\Physics\cube_Hi_Res_xyz_n.ply" />
+    <None Include="..\assets\models\Physics\cube_Low_Res_xyz_n - Copy.ply" />
+    <None Include="..\assets\models\Physics\cube_Low_Res_xyz_n.ply" />
+    <None Include="..\assets\models\Physics\Large_Physics_Bunny_XYZ_n.ply" />
+    <None Include="..\assets\models\Physics\pyramid.ply" />
+    <None Include="..\assets\models\Physics\pyramid_3.ply" />
+    <None Include="..\assets\models\Physics\Sphere_Radius_1_XYZ_n.ply" />
+    <None Include="..\assets\shaders\fragmentShader01.glsl" />
+    <None Include="..\assets\shaders\vertexShader01.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\assets\GraphicsKeys.txt" />
+    <Text Include="..\assets\keys.txt" />
+    <Text Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
