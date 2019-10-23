@@ -7,12 +7,14 @@
   </ItemGroup>
 
 
- <XMLs>
+  <ItemGroup>
+  <XMLs>
 	<Physics Include="GraphicsLibrary.xml">
 	</Physics>
 	<Physics Include="PhysicsLibrary.xml">
  	</Physics>
-</XMLs>
+  </XMLs>
+ </ItemGroup>
 
 
   <ItemGroup>

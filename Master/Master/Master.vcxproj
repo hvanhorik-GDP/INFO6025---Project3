@@ -576,6 +576,7 @@
   <!-- Only ship a clean release build -->
   <Target Name="project_03" DependsOnTargets="Clean;Build" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <Message Importance="High" Text="Let's ship this already!" />
+	<RemoveDir Directories="@(OutputDir)" />
     <MakeDir Directories="$(OutputDir)" />
     <Copy SourceFiles="$(ProjectDir)$(Platform)\$(Configuration)\$(TargetName)$(TargetExt)" DestinationFolder="$(OutputDir)" />
     <Copy SourceFiles="$(ProjectDir)$(Platform)\$(Configuration)\fmod.dll" DestinationFolder="$(OutputDir)" />

@@ -19,3 +19,5 @@ Terrain_XYZ_n.ply
 torch.ply
 treasure_chest_assembled.ply
 tresure_chest_closed_lowpoly.ply
+
+  <Target Name="project_03" DependsOnTargets="Clean;Build" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
