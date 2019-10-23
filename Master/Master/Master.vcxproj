@@ -477,79 +477,79 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <Shaders Include="assets/shaders/fragmentShader01.glsl">
+    <Shaders Include="../assets/shaders/fragmentShader01.glsl">
     </Shaders>
-    <Shaders Include="assets/shaders/vertexShader01.glsl">
+    <Shaders Include="../assets/shaders/vertexShader01.glsl">
     </Shaders>
   </ItemGroup>
   <ItemGroup>
-    <GameLibrary Include="GraphicsLibrary.xml">
+    <GameLibrary Include="../GraphicsLibrary.xml">
     </GameLibrary>
-    <GameLibrary Include="PhysicsLibrary.xml">
+    <GameLibrary Include="../PhysicsLibrary.xml">
     </GameLibrary>
   </ItemGroup>
   <ItemGroup>
-    <Physics Include="assets/models/Physics/12953_ChocolateRabbit_v1.ply">
+    <Physics Include="../assets/models/Physics/12953_ChocolateRabbit_v1.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/BigFlatTerrain_XYZ_n.ply">
+    <Physics Include="../assets/models/Physics/BigFlatTerrain_XYZ_n.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/Cube_1_Unit_from_origin_XYZ_n.ply">
+    <Physics Include="../assets/models/Physics/Cube_1_Unit_from_origin_XYZ_n.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/cube_Hi_Res_xyz_n.ply">
+    <Physics Include="../assets/models/Physics/cube_Hi_Res_xyz_n.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/cube_Low_Res_xyz_n.ply">
+    <Physics Include="../assets/models/Physics/cube_Low_Res_xyz_n.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/Large_Physics_Bunny_XYZ_n.ply">
+    <Physics Include="../assets/models/Physics/Large_Physics_Bunny_XYZ_n.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/pyramid.ply">
+    <Physics Include="../assets/models/Physics/pyramid.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/pyramid_3.ply">
+    <Physics Include="../assets/models/Physics/pyramid_3.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/pyramid_a.ply">
+    <Physics Include="../assets/models/Physics/pyramid_a.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/pyramid_b.ply">
+    <Physics Include="../assets/models/Physics/pyramid_b.ply">
     </Physics>
-    <Physics Include="assets/models/Physics/Sphere_Radius_1_XYZ_n.ply">
+    <Physics Include="../assets/models/Physics/Sphere_Radius_1_XYZ_n.ply">
     </Physics>
   </ItemGroup>
   <ItemGroup>
-    <Graphics Include="assets/models/Graphics/treasure_chest_assembled.ply">
+    <Graphics Include="../assets/models/Graphics/treasure_chest_assembled.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/tresure_chest_closed_lowpoly.ply">
+    <Graphics Include="../assets/models/Graphics/tresure_chest_closed_lowpoly.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/torch.ply">
+    <Graphics Include="../assets/models/Graphics/torch.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Terrain_XYZ_n.ply">
+    <Graphics Include="../assets/models/Graphics/Terrain_XYZ_n.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Sphere_Radius_1_XYZ_n.ply">
+    <Graphics Include="../assets/models/Graphics/Sphere_Radius_1_XYZ_n.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Sky_Pirate_Combined_xyz_n.ply">
+    <Graphics Include="../assets/models/Graphics/Sky_Pirate_Combined_xyz_n.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/SimpleRedShip.ply">
+    <Graphics Include="../assets/models/Graphics/SimpleRedShip.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/ship.ply">
+    <Graphics Include="../assets/models/Graphics/ship.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Pirate_sword_low_poly.ply">
+    <Graphics Include="../assets/models/Graphics/Pirate_sword_low_poly.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/parrot.ply">
+    <Graphics Include="../assets/models/Graphics/parrot.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/lantern_obj.ply">
+    <Graphics Include="../assets/models/Graphics/lantern_obj.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Bomb.ply">
+    <Graphics Include="../assets/models/Graphics/Bomb.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/canoe.ply">
+    <Graphics Include="../assets/models/Graphics/canoe.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Chest.ply">
+    <Graphics Include="../assets/models/Graphics/Chest.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/coin_map.ply">
+    <Graphics Include="../assets/models/Graphics/coin_map.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/compass.ply">
+    <Graphics Include="../assets/models/Graphics/compass.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Crate.ply">
+    <Graphics Include="../assets/models/Graphics/Crate.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/Crate2.ply">
+    <Graphics Include="../assets/models/Graphics/Crate2.ply">
     </Graphics>
-    <Graphics Include="assets/models/Graphics/cube_Low_Res_xyz_n.ply">
+    <Graphics Include="../assets/models/Graphics/cube_Low_Res_xyz_n.ply">
     </Graphics>
   </ItemGroup>
   <PropertyGroup>
@@ -559,13 +559,13 @@
     <GameLibraryDir>$(OutputDir)</GameLibraryDir>
   </PropertyGroup>
   <PropertyGroup>
-    <GraphicsDir>$(OutputDir)assets/models/Graphics</GraphicsDir>
+    <GraphicsDir>$(OutputDir)/assets/models/Graphics</GraphicsDir>
   </PropertyGroup>
   <PropertyGroup>
-    <PhysicsDir>$(OutputDir)assets/models/Physics</PhysicsDir>
+    <PhysicsDir>$(OutputDir)/assets/models/Physics</PhysicsDir>
   </PropertyGroup>
   <PropertyGroup>
-    <ShadersDir>$(OutputDir)assets/shaders/</ShadersDir>
+    <ShadersDir>$(OutputDir)/assets/shaders/</ShadersDir>
   </PropertyGroup>
   <Target Name="Example">
     <Message Text="Let's build this project!" />
@@ -574,17 +574,16 @@
     <Message Importance="Low" Text="This probably will go unnoticed. :(" />
   </Target>
   <!-- Only ship a clean release build -->
-  <Target Name="project_03" DependsOnTargets="" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  <Target Name="project_03" DependsOnTargets="Clean;Build" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <Message Importance="High" Text="Let's ship this already!" />
     <MakeDir Directories="$(OutputDir)" />
     <Copy SourceFiles="$(ProjectDir)$(Platform)\$(Configuration)\$(TargetName)$(TargetExt)" DestinationFolder="$(OutputDir)" />
-    <Copy SourceFiles="$(ProjectDir)fmod.dll" DestinationFolder="$(OutputDir)" />
+    <Copy SourceFiles="$(ProjectDir)$(Platform)\$(Configuration)\fmod.dll" DestinationFolder="$(OutputDir)" />
     <Copy SourceFiles="@(Shaders)" DestinationFolder="$(ShadersDir)" />
     <Copy SourceFiles="@(GameLibrary)" DestinationFolder="$(GameLibraryDir)" />
     <Copy SourceFiles="@(Physics)" DestinationFolder="$(PhysicsDir)" />
     <Copy SourceFiles="@(Graphics)" DestinationFolder="$(GraphicsDir)" />
-    <Exec Command="7z.exe a -t7z &quot;$(OutputDir)Lukas_Gustafson.7z&quot; &quot;$(OutputDir)&quot;" />
-    <!-- "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" Master.vcxproj -->
+     <!-- "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" Master.vcxproj -->
     <!-- /p:Configuration=Release /p:Platform=x64 -->
     <!-- "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" Master.vcxproj /p:Configuration=Release /p:Platform=x64-->
   </Target>

@@ -33,8 +33,8 @@
 
 int main(int arg, char** argv)
 {
-	std::string root("assets/");
-	std::string libraryName("GameLibrary.xml");
+	std::string root("");
+	std::string libraryName("PhysicsLibrary.xml");
 	if (arg > 1)
 	{
 		libraryName = argv[1];
