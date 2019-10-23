@@ -72,26 +72,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)../inc;$(ProjectDir)../Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)../inc;$(ProjectDir)../Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)../inc;$(ProjectDir)../Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)inc;$(SolutionDir)Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)../inc;$(ProjectDir)../Libraries;$(ProjectDir);$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -476,4 +476,113 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ItemGroup>
+    <Shaders Include="assets/shaders/fragmentShader01.glsl">
+    </Shaders>
+    <Shaders Include="assets/shaders/vertexShader01.glsl">
+    </Shaders>
+  </ItemGroup>
+  <ItemGroup>
+    <GameLibrary Include="GraphicsLibrary.xml">
+    </GameLibrary>
+    <GameLibrary Include="PhysicsLibrary.xml">
+    </GameLibrary>
+  </ItemGroup>
+  <ItemGroup>
+    <Physics Include="assets/models/Physics/12953_ChocolateRabbit_v1.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/BigFlatTerrain_XYZ_n.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/Cube_1_Unit_from_origin_XYZ_n.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/cube_Hi_Res_xyz_n.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/cube_Low_Res_xyz_n.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/Large_Physics_Bunny_XYZ_n.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/pyramid.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/pyramid_3.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/pyramid_a.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/pyramid_b.ply">
+    </Physics>
+    <Physics Include="assets/models/Physics/Sphere_Radius_1_XYZ_n.ply">
+    </Physics>
+  </ItemGroup>
+  <ItemGroup>
+    <Graphics Include="assets/models/Graphics/treasure_chest_assembled.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/tresure_chest_closed_lowpoly.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/torch.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Terrain_XYZ_n.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Sphere_Radius_1_XYZ_n.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Sky_Pirate_Combined_xyz_n.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/SimpleRedShip.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/ship.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Pirate_sword_low_poly.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/parrot.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/lantern_obj.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Bomb.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/canoe.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Chest.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/coin_map.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/compass.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Crate.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/Crate2.ply">
+    </Graphics>
+    <Graphics Include="assets/models/Graphics/cube_Low_Res_xyz_n.ply">
+    </Graphics>
+  </ItemGroup>
+  <PropertyGroup>
+    <OutputDir>project_03</OutputDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GameLibraryDir>$(OutputDir)</GameLibraryDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GraphicsDir>$(OutputDir)assets/models/Graphics</GraphicsDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PhysicsDir>$(OutputDir)assets/models/Physics</PhysicsDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ShadersDir>$(OutputDir)assets/shaders/</ShadersDir>
+  </PropertyGroup>
+  <Target Name="Example">
+    <Message Text="Let's build this project!" />
+    <Message Importance="High" Text="This is at the upmost importance!" />
+    <Message Importance="Normal" Text="This is a normal message" />
+    <Message Importance="Low" Text="This probably will go unnoticed. :(" />
+  </Target>
+  <!-- Only ship a clean release build -->
+  <Target Name="project_03" DependsOnTargets="" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Message Importance="High" Text="Let's ship this already!" />
+    <MakeDir Directories="$(OutputDir)" />
+    <Copy SourceFiles="$(SolutionDir)$(Platform)\$(Configuration)\$(TargetName)$(TargetExt)" DestinationFolder="$(OutputDir)" />
+    <Copy SourceFiles="$(SolutionDir)$(Platform)\$(Configuration)\fmod.dll" DestinationFolder="$(OutputDir)" />
+    <Copy SourceFiles="@(Shaders)" DestinationFolder="$(ShadersDir)" />
+    <Copy SourceFiles="@(GameLibrary)" DestinationFolder="$(GameLibraryDir)" />
+    <Copy SourceFiles="@(Physics)" DestinationFolder="$(PhysicsDir)" />
+    <Copy SourceFiles="@(Graphics)" DestinationFolder="$(GraphicsDir)" />
+    <Exec Command="7z.exe a -t7z &quot;$(OutputDir)Lukas_Gustafson.7z&quot; &quot;$(OutputDir)&quot;" />
+  </Target>
 </Project>

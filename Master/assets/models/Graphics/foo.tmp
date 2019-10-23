@@ -1,5 +1,21 @@
-barrel.ply    De_Zeven_Provincien_large.ply  Pirate_sword_low_poly.ply
-Bomb.ply      foo.tmp			     ship.ply
-canoe.ply     Kerosene_lamp_large.ply	     SimpleRedShip.ply
-coin_map.ply  lantern_obj.ply		     treasure_chest_assembled.ply
-compass.ply   parrot.ply		     tresure_chest_closed_lowpoly.ply
+barrel.ply
+Bomb.ply
+canoe.ply
+Chest.ply
+coin_map.ply
+compass.ply
+Crate.ply
+Crate2.ply
+cube_Low_Res_xyz_n.ply
+foo.tmp
+lantern_obj.ply
+parrot.ply
+Pirate_sword_low_poly.ply
+ship.ply
+SimpleRedShip.ply
+Sky_Pirate_Combined_xyz_n.ply
+Sphere_Radius_1_XYZ_n.ply
+Terrain_XYZ_n.ply
+torch.ply
+treasure_chest_assembled.ply
+tresure_chest_closed_lowpoly.ply
