@@ -6,7 +6,8 @@ Git: https://github.com/hvanhorik-GDP/INFO6025---Project3.git
 
 Soure directory : ./Master/Master/
 Source File: Master.vcxproj
-Build Command:   "C:\..../msbuild.exe" Master.vcxproj /p:Configuration=Release /p:Platform=x64 /t:project_03
+Build Command: 
+"C:\..../msbuild.exe" Master.vcxproj /p:Configuration=Release /p:Platform=x64 /t:project_03
 Output Directory: project_03
 
 To run the program:
@@ -16,10 +17,8 @@ Master.exe GraphicsLibrary.xml			- Selects the library
 Master.exe PhysicsLibrary.xml
 
 
-
-
-
 ******Old readme from original projects for Michael
+
 
 This is a readme for all three projects 
 
