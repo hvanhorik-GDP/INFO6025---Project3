@@ -545,6 +545,8 @@
     </Graphics>
     <Graphics Include="../assets/models/Graphics/compass.ply">
     </Graphics>
+    <Graphics Include="../assets/models/Graphics/barrel.ply">
+    </Graphics>
     <Graphics Include="../assets/models/Graphics/Crate.ply">
     </Graphics>
     <Graphics Include="../assets/models/Graphics/Crate2.ply">
