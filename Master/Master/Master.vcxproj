@@ -424,6 +424,7 @@
     <ClInclude Include="Physics\Physics_Callback.h" />
     <ClInclude Include="Physics\test_Physics.h" />
   </ItemGroup>
+  
   <ItemGroup>
     <Xml Include="..\assets\GraphicsLibrary(output).xml" />
     <Xml Include="..\assets\GraphicsLibrary.xml" />
@@ -482,6 +483,9 @@
     <Shaders Include="../assets/shaders/vertexShader01.glsl">
     </Shaders>
   </ItemGroup>
+  
+    <!-- ItemGroup - Combine a bunch of groups together -->
+
   <ItemGroup>
     <GameLibrary Include="../GraphicsLibrary.xml">
     </GameLibrary>
@@ -512,6 +516,7 @@
     <Physics Include="../assets/models/Physics/Sphere_Radius_1_XYZ_n.ply">
     </Physics>
   </ItemGroup>
+  
   <ItemGroup>
     <Graphics Include="../assets/models/Graphics/treasure_chest_assembled.ply">
     </Graphics>
@@ -554,8 +559,12 @@
     <Graphics Include="../assets/models/Graphics/cube_Low_Res_xyz_n.ply">
     </Graphics>
   </ItemGroup>
+  
+  <!-- PropertyGroup - List properties - directories etc. aka $(SolutionDir) -->
+  <!-- this creaates $(OutputDir), $(GameLibraryDir), $(GraphicsDir), $(PhysicsDir), $(ShadersDir) -->
+  
   <PropertyGroup>
-    <OutputDir>project_03</OutputDir>
+    <OutputDir>C:\CND\midterm\VanHorik_Henry_midterm\</OutputDir>
   </PropertyGroup>
   <PropertyGroup>
     <GameLibraryDir>$(OutputDir)</GameLibraryDir>
@@ -569,25 +578,32 @@
   <PropertyGroup>
     <ShadersDir>$(OutputDir)/assets/shaders/</ShadersDir>
   </PropertyGroup>
-  <Target Name="Example">
-    <Message Text="Let's build this project!" />
-    <Message Importance="High" Text="This is at the upmost importance!" />
-    <Message Importance="Normal" Text="This is a normal message" />
-    <Message Importance="Low" Text="This probably will go unnoticed. :(" />
-  </Target>
+
   <!-- Only ship a clean release build -->
-  <Target Name="project_03" DependsOnTargets="Clean;Build" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  <!-- Target "midterm" -->
+  <!-- DependsOnTarget="Clean;Build" -->
+  <!-- Condition= "'$(Configuration)|$(Platform)' == 'Release|x64' -->
+  
+  <Target Name="midterm" DependsOnTargets="Clean;Build" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <Message Importance="High" Text="Let's ship this already!" />
-	<RemoveDir Directories="@(OutputDir)" />
+	<!-- RemoveDir and MakeDir -->
+	<RemoveDir Directories="$(OutputDir)" />
     <MakeDir Directories="$(OutputDir)" />
+	<!-- Copy SourceFiles=" " DestinationFolder=" " -->
     <Copy SourceFiles="$(ProjectDir)$(Platform)\$(Configuration)\$(TargetName)$(TargetExt)" DestinationFolder="$(OutputDir)" />
     <Copy SourceFiles="$(ProjectDir)$(Platform)\$(Configuration)\fmod.dll" DestinationFolder="$(OutputDir)" />
+	<!-- Copy SourcFiles=@(ItemGroup) - This copies a whole group of files defined by an ItemGroup -->
     <Copy SourceFiles="@(Shaders)" DestinationFolder="$(ShadersDir)" />
     <Copy SourceFiles="@(GameLibrary)" DestinationFolder="$(GameLibraryDir)" />
     <Copy SourceFiles="@(Physics)" DestinationFolder="$(PhysicsDir)" />
     <Copy SourceFiles="@(Graphics)" DestinationFolder="$(GraphicsDir)" />
-     <!-- "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" Master.vcxproj -->
+	
+	<!-- Use xcopy to move over extra files -->
+	<Exec Command="xcopy &quot;$(ProjectDir)readme.txt&quot; &quot;$(OutputDir)&quot;" />
+
+    <!-- "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" Master.vcxproj -->
     <!-- /p:Configuration=Release /p:Platform=x64 -->
-    <!-- "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" Master.vcxproj /p:Configuration=Release /p:Platform=x64-->
-  </Target>
+    <!-- "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" Master.vcxproj /p:Configuration=Release /p:Platform=x64 /target:midterm-->
+	<!-- xcopy /S /D /Y "$(ProjectDir)includes\*" "$(SolutionDir).inc\$(ProjectName)\*" -->
+ </Target>
 </Project>

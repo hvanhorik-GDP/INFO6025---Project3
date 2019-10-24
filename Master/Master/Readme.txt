@@ -1,13 +1,14 @@
 Author: Henry Van Horik
 Student Number: 0966956
 Course: INFO6025 - Configuration and Build
-Project: Project3
+Project: Midterm
+Date: 10/24/2019
 Git: https://github.com/hvanhorik-GDP/INFO6025---Project3.git
 
 Soure directory : ./Master/Master/
 Source File: Master.vcxproj
-Build Command:   "C:\..../msbuild.exe" Master.vcxproj /p:Configuration=Release /p:Platform=x64 /t:project_03
-Output Directory: project_03
+Build Command:   "C:\..../msbuild.exe" Master.vcxproj /p:Configuration=Release /p:Platform=x64 /t:midterm
+Output Directory: "C:\CND\midterm\VanHorik_Henry_midterm""
 
 To run the program:
 
